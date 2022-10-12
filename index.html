@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,26 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="header">
         <h1>Tic Tac Toe</h1>
     </div>
 
     <div class="main">
+
+        <form id="name-input">
+            <input type="text" name="playerone" id="playerone" minlength="1" maxlength="10" placeholder="Player 1" required>
+            <input type="text" name="playertwo" id="playertwo" minlength="1" maxlength="10" placeholder="Player 2" required>
+
+            <div class="control">
+                <button class="start-game" onclick="newGameButton()">Start Game</button>
+                <button type="button" class="restart" onclick="resetGameButton()">Restart</button>
+            </div>
+        </form>
+
+        <div class="status"></div>
+
         <div class="board">
             <button class="button"></button>
             <button class="button"></button>
@@ -26,6 +41,7 @@
             <button class="button"></button>
         </div>
     </div>
-    
+
 </body>
+
 </html>
