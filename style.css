@@ -18,3 +18,17 @@ body {
     display: flex;
     align-items: center;
 }
+
+.main{
+    display:flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.board{
+    height: 500px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
