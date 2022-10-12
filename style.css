@@ -19,14 +19,14 @@ body {
     align-items: center;
 }
 
-.main{
-    display:flex;
+.main {
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px;
 }
 
-.board{
+.board {
     height: 500px;
     width: 500px;
     display: grid;
@@ -40,11 +40,11 @@ body {
     font-weight: bold;
 }
 
-form{
+form {
     padding: 10px;
 }
 
-#name-input input{
+#name-input input {
     height: 15px;
     padding: 10px;
     width: 100px;
@@ -53,7 +53,7 @@ form{
     border-radius: 5px;
 }
 
-.control{
+.control {
     display: flex;
     justify-content: center;
     padding: 25px;

@@ -35,10 +35,10 @@ const gameBoard = ((p1, p2) => {
     const gameTurn = (button, index) => {
         if (board[index] === "O" || board[index] === "X") {
             status.innerText = "Space is Taken!";
-            if (turn === 1){
+            if (turn === 1) {
                 return player2;
             }
-            else{
+            else {
                 return player1;
             }
         }
@@ -62,69 +62,86 @@ const gameBoard = ((p1, p2) => {
         if (board[0] === board[1] && board[1] === board[2] && board[2] !== "") {
             if (turn === 1) {
                 status.innerText = player2 + " is the Winner!";
+                disableButton();
             }
             else {
                 status.innerText = player1 + " is the Winner!";
+                disableButton();
             }
         }
         else if (board[3] === board[4] && board[4] === board[5] && board[5] !== "") {
             if (turn === 1) {
                 status.innerText = player2 + " is the Winner!";
+                disableButton();
             }
             else {
                 status.innerText = player1 + " is the Winner!";
+                disableButton();
             }
         }
         else if (board[6] === board[7] && board[7] === board[8] && board[8] !== "") {
             if (turn === 1) {
                 status.innerText = player2 + " is the Winner!";
+                disableButton();
             }
             else {
                 status.innerText = player1 + " is the Winner!";
+                disableButton();
             }
         }
         else if (board[0] === board[3] && board[3] === board[6] && board[6] !== "") {
             if (turn === 1) {
                 status.innerText = player2 + " is the Winner!";
+                disableButton();
             }
             else {
                 status.innerText = player1 + " is the Winner!";
+                disableButton();
             }
         }
         else if (board[1] === board[4] && board[4] === board[7] && board[7] !== "") {
             if (turn === 1) {
                 status.innerText = player2 + " is the Winner!";
+                disableButton();
             }
             else {
                 status.innerText = player1 + " is the Winner!";
+                disableButton();
             }
         }
         else if (board[2] === board[5] && board[5] === board[8] && board[8] !== "") {
             if (turn === 1) {
                 status.innerText = player2 + " is the Winner!";
+                disableButton();
             }
             else {
                 status.innerText = player1 + " is the Winner!";
+                disableButton();
             }
         }
         else if (board[0] === board[4] && board[4] === board[8] && board[8] !== "") {
             if (turn === 1) {
                 status.innerText = player2 + " is the Winner!";
+                disableButton();
             }
             else {
                 status.innerText = player1 + " is the Winner!";
+                disableButton();
             }
         }
         else if (board[2] === board[4] && board[4] === board[6] && board[6] !== "") {
             if (turn === 1) {
                 status.innerText = player2 + " is the Winner!";
+                disableButton();
             }
             else {
                 status.innerText = player1 + " is the Winner!";
+                disableButton();
             }
         }
         else if (board[0] !== "" && board[1] !== "" && board[2] !== "" && board[3] !== "" && board[4] !== "" && board[5] !== "" && board[6] !== "" && board[7] !== "" && board[8] !== "") {
             status.innerText = "Draw!";
+            disableButton();
         }
     };
 
@@ -133,9 +150,16 @@ const gameBoard = ((p1, p2) => {
             button.innerText = "";
             board[index] = "";
             button.style.backgroundColor = "";
+            button.disabled = false;
         })
         turn = 1;
     };
+
+    const disableButton = () => {
+        buttons.forEach((button) => {
+            button.disabled = true;
+        })
+    }
 
 
     return { resetGame, getPlayerNames };
